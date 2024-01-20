@@ -6,4 +6,8 @@ public interface ProductosService {
     Iterable<Producto> getAll();
 
     void save(Producto producto);
+
+    void delete(int id);
+
+    boolean exists(int id);
 }

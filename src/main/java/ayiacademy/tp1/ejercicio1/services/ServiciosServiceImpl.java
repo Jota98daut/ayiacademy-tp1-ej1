@@ -22,4 +22,10 @@ public class ServiciosServiceImpl implements ServiciosService {
     public void save(Servicio servicio) {
         serviciosRepository.save(servicio);
     }
+
+    @Transactional
+    @Override
+    public void delete(int id) {
+        serviciosRepository.deleteById(id);
+    }
 }

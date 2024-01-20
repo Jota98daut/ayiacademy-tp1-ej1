@@ -6,4 +6,6 @@ public interface ServiciosService {
     Iterable<Servicio> getAll();
 
     void save(Servicio servicio);
+
+    void delete(int id);
 }

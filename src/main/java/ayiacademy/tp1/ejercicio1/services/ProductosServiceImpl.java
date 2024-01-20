@@ -22,4 +22,15 @@ public class ProductosServiceImpl implements ProductosService {
     public void save(Producto producto) {
         productosRepository.save(producto);
     }
+
+    @Transactional
+    @Override
+    public void delete(int id) {
+        productosRepository.deleteById(id);
+    }
+
+    @Override
+    public boolean exists(int id) {
+        return productosRepository.existsById(id);
+    }
 }
