@@ -1,14 +1,14 @@
 create table usuarios (
-                          id int primary key auto_increment,
+                          id_usuario int primary key auto_increment,
                           nombre varchar(50) not null,
-                          password varchar(50) not null
+                          password_usuario varchar(50) not null
 );
 
 create index nombre_usuario_idx on usuarios (nombre);
 
 create table productos (
-                           sku varchar(20) primary key,
-                           ean varchar(20) not null,
+                           id_producto int primary key,
+                           codigo_ean varchar(20) not null,
                            nombre varchar(50) not null,
                            descripcion varchar(255) not null,
                            precio numeric(10, 2) not null,
@@ -18,8 +18,8 @@ create table productos (
 );
 
 create table servicios (
-                           cod_interno varchar(20) primary key,
-                           ean varchar(20) not null,
+                           id_servicio int primary key,
+                           codigo_ean varchar(20) not null,
                            nombre varchar(50) not null,
                            descripcion varchar(255) not null,
                            precio numeric(10, 2) not null,

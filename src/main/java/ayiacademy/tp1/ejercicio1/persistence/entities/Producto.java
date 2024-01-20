@@ -17,9 +17,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class Producto implements Serializable {
     @Id
-    private String sku;
+    private int idProducto;
 
-    private String ean;
+    private String codigoEan;
     private String nombre;
     private String descripcion;
     private float precio;

@@ -23,8 +23,8 @@
     </thead>
     <tbody>
     <tr th:each="producto: ${productos}">
-        <td th:text="${producto.getSku()}"></td>
-        <td th:text="${producto.getEan()}"></td>
+        <td th:text="${producto.getIdProducto()}"></td>
+        <td th:text="${producto.getCodigoEan()}"></td>
         <td th:text="${producto.getNombre()}"></td>
         <td th:text="${producto.getDescripcion()}"></td>
         <td th:text="${producto.getPrecio()}"></td>
@@ -47,8 +47,8 @@
     </thead>
     <tbody>
     <tr th:each="servicio: ${servicios}">
-        <td th:text="${servicio.getCodInterno()}"></td>
-        <td th:text="${servicio.getEan()}"></td>
+        <td th:text="${servicio.getIdServicio()}"></td>
+        <td th:text="${servicio.getCodigoEan()}"></td>
         <td th:text="${servicio.getNombre()}"></td>
         <td th:text="${servicio.getDescripcion()}"></td>
         <td th:text="${servicio.getPrecio()}"></td>

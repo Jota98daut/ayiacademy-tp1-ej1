@@ -17,14 +17,14 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
     @Id
     @GeneratedValue
-    private int id;
+    private int idUsuario;
 
     private String nombre;
-    private String password;
+    private String passwordUsuario;
 
-    public Usuario(String nombre, String password) {
+    public Usuario(String nombre, String passwordUsuario) {
         this.nombre = nombre;
-        this.password = password;
+        this.passwordUsuario = passwordUsuario;
     }
 
     @Serial

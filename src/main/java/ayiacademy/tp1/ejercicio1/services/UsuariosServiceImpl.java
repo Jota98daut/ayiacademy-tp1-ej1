@@ -13,8 +13,8 @@ public class UsuariosServiceImpl implements UsuariosService {
     private UsuariosRepository usuariosRepository;
 
     @Override
-    public boolean validatePassword(String nombre, String password) {
+    public boolean validatePassword(String nombre, String passwordUsuario) {
         List<Usuario> usuarios = usuariosRepository.findByNombre(nombre);
-        return usuarios.stream().anyMatch(usuario -> usuario.getPassword().equals(password));
+        return usuarios.stream().anyMatch(usuario -> usuario.getPasswordUsuario().equals(passwordUsuario));
     }
 }
