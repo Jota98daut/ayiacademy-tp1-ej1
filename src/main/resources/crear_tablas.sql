@@ -4,6 +4,8 @@ create table usuarios (
                           password varchar(50) not null
 );
 
+create index nombre_usuario_idx on usuarios (nombre);
+
 create table productos (
                            sku varchar(20) primary key,
                            ean varchar(20) not null,
