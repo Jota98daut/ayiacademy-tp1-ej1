@@ -9,54 +9,61 @@
 <div class="container">
     <h1>Productos y Servicios</h1>
 
-    <h2 th:text="${tituloProductos}"></h2>
-    <table class="table table-striped">
-        <thead class="table-primary">
-        <tr>
-            <th>Cód. interno</th>
-            <th>EAN</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Stock</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="producto: ${productos}">
-            <td th:text="${producto.getIdProducto()}"></td>
-            <td th:text="${producto.getCodigoEan()}"></td>
-            <td th:text="${producto.getNombre()}"></td>
-            <td th:text="${producto.getDescripcion()}"></td>
-            <td th:text="${producto.getPrecio()}"></td>
-            <td th:text="${producto.getStock()}"></td>
-        </tr>
-        </tbody>
-    </table>
-    <a href="/productos/nuevo" class="btn btn-primary">Agregar</a>
+    <div class="mb-5">
+        <h2 th:text="${tituloProductos}"></h2>
+        <table class="table table-striped">
+            <thead class="table-primary">
+            <tr>
+                <th>Cód. interno</th>
+                <th>EAN</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="producto: ${productos}">
+                <td th:text="${producto.getIdProducto()}"></td>
+                <td th:text="${producto.getCodigoEan()}"></td>
+                <td th:text="${producto.getNombre()}"></td>
+                <td th:text="${producto.getDescripcion()}"></td>
+                <td th:text="${producto.getPrecio()}"></td>
+                <td th:text="${producto.getStock()}"></td>
+            </tr>
+            </tbody>
+        </table>
 
-    <h2 th:text="${tituloServicios}"></h2>
-    <table class="table table-striped">
-        <thead class="table-primary">
-        <tr>
-            <th>Cod. interno</th>
-            <th>EAN</th>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Duración</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="servicio: ${servicios}">
-            <td th:text="${servicio.getIdServicio()}"></td>
-            <td th:text="${servicio.getCodigoEan()}"></td>
-            <td th:text="${servicio.getNombre()}"></td>
-            <td th:text="${servicio.getDescripcion()}"></td>
-            <td th:text="${servicio.getPrecio()}"></td>
-            <td th:text="${servicio.getDuracion()}"></td>
-        </tr>
-        </tbody>
-    </table>
+        <a href="/productos/nuevo" class="btn btn-primary">Agregar</a>
+    </div>
+
+    <div>
+        <h2 th:text="${tituloServicios}"></h2>
+        <table class="table table-striped">
+            <thead class="table-primary">
+            <tr>
+                <th>Cod. interno</th>
+                <th>EAN</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Duración</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="servicio: ${servicios}">
+                <td th:text="${servicio.getIdServicio()}"></td>
+                <td th:text="${servicio.getCodigoEan()}"></td>
+                <td th:text="${servicio.getNombre()}"></td>
+                <td th:text="${servicio.getDescripcion()}"></td>
+                <td th:text="${servicio.getPrecio()}"></td>
+                <td th:text="${servicio.getDuracion()}"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <a href="/servicios/nuevo" class="btn btn-primary">Agregar</a>
+    </div>
 
     <script src="/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </div>
