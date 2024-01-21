@@ -28,8 +28,15 @@
         <label for="stock" class="form-label">Stock</label>
         <input th:field="*{stock}" type="number" name="stock" id="stock" class="form-control mb-3">
 
-        <button type="submit" class="btn btn-primary">Agregar</button>
-        <button type="reset" class="btn btn-secondary">Reset</button>
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </div>
+          <div class="col-auto">
+            <a th:href="@{/listado}" class="btn btn-secondary">Volver</a>
+          </div>
+        </div>
     </form>
 </div>
 

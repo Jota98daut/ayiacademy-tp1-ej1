@@ -27,9 +27,15 @@
 
         <label for="duracion" class="form-label">Duración</label>
         <input th:field="*{duracion}" type="number" name="duracion" id="duracion" class="form-control mb-3">
-
-        <button type="submit" class="btn btn-primary">Agregar</button>
-        <button type="reset" class="btn btn-secondary">Reset</button>
+        <div class="row justify-content-between">
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </div>
+          <div class="col-auto">
+            <a th:href="@{/listado}" class="btn btn-secondary">Volver</a>
+          </div>
+        </div>
     </form>
 </div>
 
